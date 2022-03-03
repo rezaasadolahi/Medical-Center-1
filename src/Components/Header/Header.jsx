@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
-import { IoCall, IoMailSharp, IoLogoTwitter, IoLogoInstagram, IoLogoFacebook, IoSearchSharp } from "react-icons/io5"
-import { AiOutlineMinus } from "react-icons/ai"
 import { MDBBtn } from 'mdb-react-ui-kit'
 import 'mdb-react-ui-kit/dist/css/mdb.min.css'
+//* Icons
+import { IoCall, IoMailSharp, IoLogoTwitter, IoLogoInstagram, IoLogoFacebook, IoSearchSharp } from "react-icons/io5"
+import { AiOutlineMinus } from "react-icons/ai"
 //* CSS
 import './CSS/Header.scss'
 
