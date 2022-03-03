@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import { IoCall, IoMailSharp, IoLogoTwitter, IoLogoInstagram, IoLogoFacebook, IoSearchSharp } from "react-icons/io5"
 import { AiOutlineMinus } from "react-icons/ai"
 import { MDBBtn } from 'mdb-react-ui-kit'
@@ -13,7 +13,13 @@ import './CSS/Header.scss'
 
 
 
+
 function Header() {
+  const navigate = useNavigate()
+
+
+
+
   return (
     <header>
       <nav>
@@ -23,12 +29,12 @@ function Header() {
               <section id='address'>
                 <a href="tel:5551234567">
                   <IoCall id='icon-call' />
-                  <span>Call (555)123-4567</span>
+                  <span>تلفن (555)123-4567</span>
                 </a>
                 <AiOutlineMinus id='Vertical-line' />
                 <a href="mailto: abc@example.com">
                   <IoMailSharp id='email' />
-                  <span>mail@example.com</span>
+                  <span>پست الکترونیک @example.com</span>
                 </a>
               </section>
               <section id='social-media'>
@@ -42,12 +48,12 @@ function Header() {
 
         <div id='manage-twoBox-head'>
           <section id='form'>
-            <article>
+            <Link to='/'>
               <span>Medical</span>
               <span>-</span>
               <span>Center</span>
-            </article>
-            <form action="" class="input-group h-75">
+            </Link>
+            <form action="" className="input-group h-75">
               <span className="input-group-text" id="basic-addon1"><IoSearchSharp id='icon-search' /></span>
               <input
                 type="text"
@@ -60,32 +66,32 @@ function Header() {
 
           <ul id='menu'>
             <li>
-              <MDBBtn id="login-register">Login / Register</MDBBtn>
+              <MDBBtn id="login-register">ورود / ثبت نام</MDBBtn>
             </li>
             <li>
               <input type="radio" name="menu" id='one' defaultChecked />
-              <label htmlFor="one">خانه</label>
+              <label htmlFor="one" onClick={() => navigate('/', { replace: true })}>خانه</label>
             </li>
             <li>
               <input type="radio" name="menu" id='two' />
-              <label htmlFor="two">درباره ما</label>
+              <label htmlFor="two" onClick={() => navigate('/About', { replace: true })}>درباره ما</label>
             </li>
             <li>
               <input type="radio" name="menu" id='three' />
-              <label htmlFor="three">دکتر ها</label>
+              <label htmlFor="three" onClick={() => navigate('/Doctors', { replace: true })}>دکتر ها</label>
             </li>
             <li>
               <input type="radio" name="menu" id='four' />
-              <label htmlFor="four">اخبار</label>
+              <label htmlFor="four" onClick={() => navigate('/News', { replace: true })}>اخبار</label>
             </li>
             <li>
               <input type="radio" name="menu" id='five' />
-              <label htmlFor="five">مخاطب ها</label>
+              <label htmlFor="five" onClick={() => navigate('/Contacts', { replace: true })}>مخاطب ها</label>
             </li>
           </ul>
         </div>
       </nav>
-    </header>
+    </header >
   )
 }
 

@@ -18,9 +18,9 @@ function Home() {
             <div id='hero-section'>
                 <Zoom>
                     <section id='box-one'>
-                        <span class="subhead">Let's make your life happier</span>
-                        <h1 class="display-4">Healthy Living</h1>
-                        <Link to="#" className='btn-primary mx-auto'>Let's Consult</Link>
+                        <span className="subhead">بیایید زندگی شما را شادتر کنیم</span>
+                        <h1 className="display-4">زندگی سالم</h1>
+                        <Link to="#" className='btn-primary mx-auto'>بیایید مشورت کنیم</Link>
                     </section>
                 </Zoom>
 
@@ -30,26 +30,26 @@ function Home() {
                             <div id='icon-chat'>
                                 <IoChatbubblesOutline id='Chatbubble' />
                             </div>
-                            <p>Chat with a doctors</p>
+                            <p>با یک پزشک چت کنید</p>
                         </section>
                         <section id='box2'>
                             <div id='icon-shield'>
                                 <IoShieldCheckmarkSharp id='shield' />
                             </div>
-                            <p>One-Health Protection</p>
+                            <p>حفاظت از یک سلامت</p>
                         </section>
                         <section id='box3'>
                             <div id='icon-basket'>
                                 <IoBasketSharp id='basket' />
                             </div>
-                            <p>One-Health Pharmacy</p>
+                            <p>داروخانه تک سلامت</p>
                         </section>
                     </div>
                 </Slide>
             </div>
 
 
-
+        
             <div id='page-section2'>
 
             </div>
