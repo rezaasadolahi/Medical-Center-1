@@ -22,6 +22,8 @@ import person_2 from './Image/person/person_2.jpg'
 import mobile_app from './Image/mobile_app.png'
 import google_play from './Image/google_play.svg'
 import app_store from './Image/app_store.svg'
+//* Components
+import Footer from '../Footer/Footer'
 
 
 
@@ -276,6 +278,11 @@ function Home() {
                     </section>
                 </Fade>
             </div>
+
+
+
+            {/* Footer */}
+            <Footer />
         </div >
     )
 }
