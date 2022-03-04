@@ -4,8 +4,9 @@ import { IoChatbubblesOutline, IoBasketSharp, IoShieldCheckmarkSharp } from "rea
 import Slide from 'react-reveal/Slide'
 import Zoom from 'react-reveal/Zoom'
 import Fade from 'react-reveal/Fade'
+import Flip from 'react-reveal/Flip'
 //* Icons
-import { IoCall, IoLogoWhatsapp } from "react-icons/io5"
+import { IoCall, IoLogoWhatsapp, IoTime } from "react-icons/io5"
 //* CSS
 import './CSS/Home.scss'
 //* Image
@@ -13,9 +14,14 @@ import bgDoctor from './Image/bg-doctor.png'
 import doctor_1 from './Image/doctors/doctor_1.jpg'
 import doctor_2 from './Image/doctors/doctor_2.jpg'
 import doctor_3 from './Image/doctors/doctor_3.jpg'
-
-
-
+import blog_1 from './Image/blog/blog_1.jpg'
+import blog_2 from './Image/blog/blog_2.jpg'
+import blog_3 from './Image/blog/blog_3.jpg'
+import person_1 from './Image/person/person_1.jpg'
+import person_2 from './Image/person/person_2.jpg'
+import mobile_app from './Image/mobile_app.png'
+import google_play from './Image/google_play.svg'
+import app_store from './Image/app_store.svg'
 
 
 
@@ -74,8 +80,6 @@ function Home() {
                     </article>
                 </Fade>
             </div>
-
-
 
             <div id='page-section3'>
                 <Fade top>
@@ -141,6 +145,135 @@ function Home() {
                             </article>
                         </section>
                     </div>
+                </Fade>
+            </div>
+
+            <div id="page-section4">
+                <Fade top>
+                    <h1>آخرین خبرها</h1>
+                </Fade>
+                <Zoom>
+                    <div id='cards-news'>
+                        <section id='card-one'>
+                            <section id='image'>
+                                <img src={blog_1} alt="" />
+                                <p>Covid19</p>
+                            </section>
+                            <section id='text-card'>
+                                <h1>List of Countries without Coronavirus case</h1>
+                                <section id='info'>
+                                    <img src={person_1} alt="" />
+                                    <p>Roger Adams</p>
+                                    <section>
+                                        <p> 1 week ago</p>
+                                        <IoTime />
+                                    </section>
+                                </section>
+                            </section>
+                        </section>
+
+                        <section id='card-two'>
+                            <section id='image'>
+                                <img src={blog_2} alt="" />
+                                <p>Covid19</p>
+                            </section>
+                            <section id='text-card'>
+                                <h1>List of Countries without Coronavirus case</h1>
+                                <section id='info'>
+                                    <img src={person_1} alt="" />
+                                    <p>Roger Adams</p>
+                                    <section>
+                                        <p> 1 week ago</p>
+                                        <IoTime />
+                                    </section>
+                                </section>
+                            </section>
+                        </section>
+
+                        <section id='card-three'>
+                            <section id='image'>
+                                <img src={blog_3} alt="" />
+                                <p>Covid19</p>
+                            </section>
+                            <section id='text-card'>
+                                <h1>List of Countries without Coronavirus case</h1>
+                                <section id='info'>
+                                    <img src={person_2} alt="" />
+                                    <p>Roger Adams</p>
+                                    <section>
+                                        <p> 1 week ago</p>
+                                        <IoTime />
+                                    </section>
+                                </section>
+                            </section>
+                        </section>
+                    </div>
+                    <a className="btn-primary mx-auto" href="/">بیشتر بدانید</a>
+                </Zoom>
+            </div>
+
+            <div id="page-section5">
+                <Flip bottom cascade>
+                    <h1>Make an Appointment</h1>
+                </Flip>
+
+                <form className="main-form">
+                    <div className="row mt-5 ">
+                        <Fade left>
+                            <div className="col-12 col-sm-6 py-2 wow fadeInLeft">
+                                <input type="text" className="form-control" placeholder="Full name" />
+                            </div>
+                        </Fade>
+                        <Fade right>
+                            <div className="col-12 col-sm-6 py-2 wow fadeInRight">
+                                <input type="text" className="form-control" placeholder="Email address.." />
+                            </div>
+                        </Fade>
+                        <Fade left>
+                            <div className="col-12 col-sm-6 py-2 wow fadeInLeft" data-wow-delay="300ms" >
+                                <input type="date" className="form-control" />
+                            </div>
+                        </Fade>
+                        <Fade right>
+                            <div className="col-12 col-sm-6 py-2 wow fadeInRight" data-wow-delay="300ms">
+                                <select name="departement" id="departement" className="custom-select">
+                                    <option value="general">General Health</option>
+                                    <option value="cardiology">Cardiology</option>
+                                    <option value="dental">Dental</option>
+                                    <option value="neurology">Neurology</option>
+                                    <option value="orthopaedics">Orthopaedics</option>
+                                </select>
+                            </div>
+                        </Fade>
+                        <Slide bottom>
+                            <div className="col-12 py-2 wow fadeInUp" data-wow-delay="300ms">
+                                <input type="text" className="form-control" placeholder="Number.." />
+                            </div>
+                        </Slide>
+                        <Slide bottom>
+                            <div className="col-12 py-2 wow fadeInUp" data-wow-delay="300ms">
+                                <textarea name="message" id="message" className="form-control" rows="6" placeholder="Enter message.."></textarea>
+                            </div>
+                        </Slide>
+                    </div>
+                    <Zoom bottom>
+                        <button type="submit" className="btn btn-primary mt-3 wow zoomIn">ارسال درخواست</button>
+                    </Zoom>
+                </form>
+            </div >
+
+            <div id="page-section6">
+                <Zoom>
+                    <img src={mobile_app} alt="" id='mobile-app' />
+                </Zoom>
+                <Fade right>
+                    <section>
+                        <h1>Get easy access of all features using One Health Application</h1>
+                        <section id='appstore-googleplay'>
+                            <img src={app_store} alt="" />
+                            <img src={google_play} alt="" />
+                        </section>
+                    </section>
                 </Fade>
             </div>
         </div >
